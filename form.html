@@ -1,113 +1,140 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" href="formstyle.css">
+  <link rel="stylesheet" href="formstyle.css">
+
 </head>
+
 <body>
 
   <div class="sec1">
-    
-    <h1 style="text-align: center; background-color:;"><img src="tntra.jpg" alt="">Customer Details</h1>
+
+    <h1 style="text-align: center;"><img src="tntra.jpg" alt="">Customer Details</h1>
     <hr>
-</div>
-<section class="sectionwhole">
-<form>
-    <h2>Full Name</h2>
-  <label for="fname">First name: </label>
-  <input type="text" id="fname" >
-  <label for="lname">Last name </label>
-  <input type="text" id="lname" >
+  </div>
+  <section class="sectionwhole">
+    <form>
 
-  <h2>Address</h2>
-  <label for="st1">Street Address</label><br>
-  <textarea id="st1"rows="3" cols="82" placeholder="Type Here ...">
+      <h2>Full Name</h2>
+      <label for="fname">First name </label>
+      <input type="text" id="fname">
+      <span id="fnamewrong"></span>
+
+      <label for="lname">Last name </label>
+      <input type="text" id="lname">
+      <span id="lnamewrong"></span>
+
+      <h2>Address</h2>
+      <label for="st1">Street Address</label><br>
+      <textarea id="st1" rows="3" cols="82" placeholder="Type Here ...">
   </textarea>
-  <br>
-  <label for="st2">Street Address Line 2</label><br>
-  <textarea id="st2"rows="3" cols="82" placeholder="Type Here ...">
- </textarea><br><br>
+      <span id="addwrong"></span>
+      <br>
+      <label for="st2">Street Address Line 2</label><br>
+      <textarea id="st2" rows="3" cols="82" placeholder="Type Here ...">
+ </textarea>
+      <span id="add2wrong"></span>
+      <br><br>
 
 
-  <label for="city">City </label>
-  <input type="text" id="city" >
+      <label for="city">City </label>
+      <input type="text" id="city">
+      <span id="citywrong"></span>
 
-  <label for="state">State/Province</label>
-  <input type="text" id="state" ><br><br>
+      <label for="state">State/Province</label>
+      <input type="text" id="state">
+      <span id="provwrong"></span>
 
-  <label style="align-items:flex-start;" for="postalcode">Postal Code</label>
-  <input type="number" id="postalcode" >
-  
-  <h2>
-    <label for="Phone">Phone Number</label>
-  </h2>
-  <input type="number" id="Phone" >
+      <br><br>
 
-  <h2>
-    <label for="email">E mail</label>
-  </h2>
-  <input type="email" id="email" >
+      <label style="align-items:flex-start;" for="postalcode">Postal Code</label>
+      <input type="text" id="postalcode">
+      <span id="pinwrong"></span>
 
-  <h2>
-    <label for="Feedback">Feedback about us.</label>
-  </h2>
-  
-  <textarea id="Feedback"rows="7" cols="82" placeholder="Type Here ..."></textarea>
+      <h2>
+        <label for="Phone">Phone Number</label>
+      </h2>
+      <input type="text" id="Phone">
+      <span id="phwrong"></span>
 
-  <h2>
-    <label for="Suggestions">Suggestions if any</label>
-  </h2>
-    <textarea id="Suggestions" rows="7" cols="82" placeholder="Type Here ..."></textarea>
-
-  <h2><label for="cars">How did you about us?</label><br><br></h2>
-
-<select  id="cars">
-  <option value="Newspaper">newspaper</option>
-  <option value="Internet">magzine</option>
-  <option value="Magzine">Internet</option>
-</select><br>
-<h2>Would you be willing to recommand us</h2>
-<input type="checkbox" id="yes" >
-<label for="yes"> yes </label><br>
-<input type="checkbox" id="maybe" >
-<label for="maybe"> maybe</label><br>
-<input type="checkbox" id="no">
-<label for="no"> no</label><br><br>
-
-<h2>Please give reference of any two people whom do you feel</h2>
-  
-<table>
-    <tr>
-      <td style="border: none;">      </td>
-      <td>Full name </td>
-      <td>Address</td>
-      <td>Contact Number</td>
-      <tr>
-        <td>1</td>
-        <td><input type="text" ></td>
-        <td><input type="text" ></td>
-        <td><input type="text" ></td>
-      </tr>
-      <td>2</td>
-      <td><input type="text" ></td>
-      <td><input type="text" ></td>
-      <td><input type="text" ></td>
-  </table>
-
-  <h2>Select Gender</h2>
-
-  <label for="Male">Male </label>
-  <input type="radio" id="Male" >
-  <label for="FeMale">Female </label>
-  <input type="radio" id="FeMale" >
-  <label for="Others">Others </label>
-  <input type="radio" id="Others" ><br><br>
+      <h2>
+        <label for="email">E mail</label>
+      </h2>
+      <input type="text" id="email">
+      <span id="emailwrong"></span>
 
 
-  <button>
-    Submit
-  </button>
-</section>
-</form>
+      <h2>
+        <label for="Feedback">Feedback about us.</label>
+      </h2>
+
+      <textarea id="Feedback" rows="7" cols="82" placeholder="Type Here ..."></textarea>
+      <span id="feedwrong"></span>
+
+
+      <h2>
+        <label for="Suggestions">Suggestions if any</label>
+      </h2>
+      <textarea id="Suggestions" rows="7" cols="82" placeholder="Type Here ..."></textarea>
+      <span id="suggestwrong"></span>
+    </form>
+
+    <form>
+      <h2><label for="cars">How did you about us?</label><br><br></h2>
+
+      <select id="cars" name="cars">
+        <option value="Newspaper">newspaper</option>
+        <option value="Internet">magzine</option>
+        <option value="Magzine">Internet</option>
+      </select><br>
+
+      <h2>Would you be willing to recommand us</h2>
+      <input type="checkbox" id="yes">
+      <label for="yes"> yes </label><br>
+      <input type="checkbox" id="maybe">
+      <label for="maybe"> maybe</label><br>
+      <input type="checkbox" id="no">
+      <label for="no"> no</label><br><br>
+
+      <h2>Please give reference of any two people whom do you feel</h2>
+
+      <table>
+        <tr>
+          <td style="border: none;"> </td>
+          <td>Full name </td>
+          <td>Address</td>
+          <td>Contact Number</td>
+        <tr>
+          <td>1</td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+        <td>2</td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+      </table>
+
+      <h2>Select Gender</h2>
+
+      <label for="male">Male</label>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="female">Female</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="others">Others</label>
+      <input type="radio" id="others" name="gender" value="others" />
+
+      <button type="submit">
+        Submit
+      </button>
+
+    </form>
+
+  </section>
+  <script src="script.js"></script>
+
 </body>
 
 
