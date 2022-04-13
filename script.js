@@ -1,4 +1,4 @@
-function validate(e) {
+function Validate(e) {
   e.preventDefault();
 
   var email = document.getElementById("email").value;
@@ -119,8 +119,13 @@ function validate(e) {
 
   }
 
+
+
 }
-document.querySelector("form").onclick = validate;
+
+
+
+document.querySelector("form").onsubmit = Validate;
 
 
 
