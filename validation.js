@@ -1,6 +1,5 @@
 document.querySelector("form").onsubmit = (e) => {
   e.preventDefault();
-  console.log("Hii");
 }
 
 const fnamere = /^[A-Za-z]{3,30}$/;
@@ -57,6 +56,8 @@ document.getElementById("submit").onclick = function () {
   var drp = row.insertCell(11);
   var gen = row.insertCell(12);
   var checkvalue = row.insertCell(13);
+  var dlt = row.insertCell(14);
+
 
   fn.innerHTML = document.getElementById("fname").value;
   ln.innerHTML = document.getElementById("lname").value;
@@ -70,6 +71,8 @@ document.getElementById("submit").onclick = function () {
   fed.innerHTML = document.getElementById("Feedback").value;
   sugg.innerHTML = document.getElementById("Suggestions").value;
   drp.innerHTML = document.getElementById("cars").value;
+  dlt.innerHTML = "<img src='images/icons8-delete-30.png' onclick='myDeleteFunction(this)'><img src='images/icons8-edit-30.png'onclick='onedit(this)'>";
+
 
   var markedcheckbox = document.getElementsByName('eee');
   for (let checkbox of markedcheckbox) {
@@ -78,7 +81,6 @@ document.getElementById("submit").onclick = function () {
 
     }
   }
-
 
   if (document.getElementById("male").checked) {
     gen.innerHTML = document.getElementById("male").value
@@ -93,6 +95,30 @@ document.getElementById("submit").onclick = function () {
 
   }
 
+}
 
+function myDeleteFunction(td) {
+  row = td.parentElement.parentElement;
+  document.getElementById("table").deleteRow(row.rowIndex);
+}
 
+function onedit(td) {
+  selectedRow = td.parentElement.parentElement;
+  document.getElementById("fname").value = selectedRow.cells[0].innerHTML;
+  document.getElementById("lname").value = selectedRow.cells[1].innerHTML;
+  document.getElementById("st1").value = selectedRow.cells[2].innerHTML;
+  document.getElementById("st2").value = selectedRow.cells[3].innerHTML;
+  document.getElementById("city").value = selectedRow.cells[4].innerHTML;
+  document.getElementById("state").value = selectedRow.cells[5].innerHTML;
+  document.getElementById("postalcode").value = selectedRow.cells[6].innerHTML;
+  document.getElementById("Phone").value = selectedRow.cells[7].innerHTML;
+  document.getElementById("email").value = selectedRow.cells[8].innerHTML;
+  document.getElementById("Feedback").value = selectedRow.cells[9].innerHTML;
+  document.getElementById("Suggestions").value = selectedRow.cells[10].innerHTML;
+  document.querySelector("select").value = selectedRow.cells[11].innerHTML;
+
+  var temp = "input[type=radio][value=" + selectedRow.cells[12].innerHTML + "]";
+  document.querySelector(temp).checked = true;
+
+  myDeleteFunction(td);
 }
