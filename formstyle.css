@@ -1,71 +1,80 @@
-h1
-{
- 
- font-size: 45px;
- background-color: white;
- padding: 30px;
- margin: 0px;
+h1 {
+
+  font-size: 45px;
+  background-color: white;
+  padding: 30px;
+  margin: 0px;
 }
 
-h1 img
-{
- height: 65px;
- width: 190px;
- object-fit: cover;
- float: left;
-}
-span
-{
-    color: red;
+h1 img {
+  height: 65px;
+  width: 190px;
+  object-fit: cover;
+  float: left;
 }
 
-.sectionwhole
-{
-    border: solid;
-    border-color:white;
-    border-width: 75px;
+span {
+  color: red;
 }
 
-form
-{
-    display: block;
-    width: max-content;
-    margin: 100px auto;
-    border:solid;
-    border-width: 50px;
-    padding: 30px 70px;
-    background-color: white;
-    
-}  
-td
-{
-    border:solid;
-    border-width: thin;
-    padding: 10px;
-}
-h2
-{
-    font-size: 30px;
+.sectionwhole {
+  border: solid;
+  border-color: white;
+  border-width: 75px;
 }
 
-label
-{
-    font-size: 30px;
-}
-body
-{
-    background-color: maroon;
-}
-select
-{
-    height: 30px;
-    width: 100px;
+form {
+  display: block;
+  width: max-content;
+  margin: 100px auto;
+  border: solid;
+  border-width: 50px;
+  padding: 30px 70px;
+  background-color: white;
+
 }
 
-button
-{
- height: 50px;
- width: 150px;
- background-color: maroon;
+td {
+  border: solid;
+  border-width: thin;
+  padding: 10px;
+}
 
+h2 {
+  font-size: 30px;
+}
+
+label {
+  font-size: 30px;
+}
+
+body {
+  background-color: #ac6161;
+}
+
+select {
+  height: 30px;
+  width: 100px;
+}
+
+button {
+  height: 50px;
+  width: 150px;
+  background-color: maroon;
+
+}
+
+
+#table {
+  margin: 0 auto;
+  margin-top: 75px;
+  overflow-x: scroll;
+  background-color: white;
+}
+
+.table1 th {
+  font-size: 30px;
+  height: 50px;
+  width: 900px;
+  background-color: white;
 }
